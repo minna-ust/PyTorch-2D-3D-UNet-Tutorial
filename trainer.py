@@ -40,6 +40,7 @@ class Trainer:
 
         progressbar = trange(self.epochs, desc='Progress')
         for i in progressbar:
+            print("debut1: ******************: i: ", i)
             """Epoch counter"""
             self.epoch += 1  # epoch counter
 
@@ -78,6 +79,7 @@ class Trainer:
             loss_value = loss.item()
             train_losses.append(loss_value)
             loss.backward()  # one backward pass
+            print("debug: ************************ i: ", i)
             self.optimizer.step()  # update the parameters
 
             batch_iter.set_description(f'Training: (loss {loss_value:.4f})')  # update progressbar
