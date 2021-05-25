@@ -27,7 +27,7 @@ class DatasetViewer:
 
     def napari(self):
         # IPython magic
-        enable_gui_qt()
+        # enable_gui_qt()
 
         # napari
         if self.viewer:

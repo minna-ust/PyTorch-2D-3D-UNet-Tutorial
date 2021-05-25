@@ -116,8 +116,9 @@ from visual import DatasetViewer
 dataset_viewer_training = DatasetViewer(dataset_train)
 dataset_viewer_validation = DatasetViewer(dataset_valid)
 
-# dataset_viewer_training.napari()
-
+dataset_viewer_training.napari()
+import napari
+napari.run()
 # device
 if torch.cuda.is_available():
     device = torch.device('cuda')
