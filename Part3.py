@@ -155,3 +155,9 @@ trainer = Trainer(model=model,
 import ipdb; ipdb.set_trace()
 # start training
 training_losses, validation_losses, lr_rates = trainer.run_trainer()
+
+# save model
+print("*****************save the model******************")
+model_name = 'door_model.pt'
+print(pathlib.Path.cwd())
+torch.save(model.state_dict(), pathlib.Path.cwd() / model_name)

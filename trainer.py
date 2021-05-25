@@ -80,6 +80,7 @@ class Trainer:
             train_losses.append(loss_value)
             loss.backward()  # one backward pass
             print("debug: ************************ i: ", i)
+            print("loss_value: ", loss_value)
             self.optimizer.step()  # update the parameters
 
             batch_iter.set_description(f'Training: (loss {loss_value:.4f})')  # update progressbar
